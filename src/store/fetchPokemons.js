@@ -21,7 +21,8 @@ export default () => {
         name: pokemon.name,
         captureRate: pokemon.capture_rate,
         isCatch: false,
-        img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
+        img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`,
+        home: false
       }) ))
       .then(pokemons => dispatch(fetchPokemonSuccess(pokemons)))
   }

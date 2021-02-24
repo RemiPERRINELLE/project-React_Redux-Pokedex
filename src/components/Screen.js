@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 
 const Screen = ({ onScreen, pokemons }) => {
-  if(onScreen.id) {
+  if(onScreen.home === false) {
     const imgSrc = pokemons[onScreen.id - 1 ].isCatch ? require('../imgs/pokeball_screen.png') : onScreen.img;
     return(
       <>

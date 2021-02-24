@@ -2,6 +2,7 @@ export const FETCH_POKEMON_SUCCESS = 'FETCH_POKEMON_SUCCESS';
 export const FETCH_POKEMON_PENDING = 'FETCH_POKEMON_PENDING';
 export const SHOW_POKEMON = 'SHOW_POKEMON';
 export const CATCH_POKEMON = 'CATCH_POKEMON';
+export const HOME_SCREEN = 'HOME_SCREEN';
 
 export const fetchPokemonSuccess = pokemons => ({
   type: FETCH_POKEMON_SUCCESS,
@@ -29,4 +30,14 @@ export const catchPokemon = () => {
   return dispatch => {
     dispatch({ type: CATCH_POKEMON, random })
   };
-}
+};
+
+export const homeScreen = () => {
+  const onScreen = {
+    home: true
+  };
+
+  return dispatch => {
+    dispatch({ type: HOME_SCREEN, onScreen })
+  };
+};

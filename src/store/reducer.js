@@ -1,5 +1,5 @@
 import initialState from './initialState'
-import { FETCH_POKEMON_SUCCESS, FETCH_POKEMON_PENDING, SHOW_POKEMON, CATCH_POKEMON } from './action';
+import { FETCH_POKEMON_SUCCESS, FETCH_POKEMON_PENDING, SHOW_POKEMON, CATCH_POKEMON, HOME_SCREEN } from './action';
 
 const reducer = ( state = initialState, action ) => {
   switch(action.type) {
@@ -35,6 +35,12 @@ const reducer = ( state = initialState, action ) => {
             return pokemon;
           })
         }
+      }
+      break;
+    case HOME_SCREEN:
+      return {
+        ...state,
+        onScreen: action.onScreen,
       }
     default:
       return state;

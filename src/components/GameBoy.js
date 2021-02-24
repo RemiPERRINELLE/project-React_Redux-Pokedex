@@ -4,7 +4,7 @@ import "./GameBoy.css";
 
 import Screen from "./Screen";
 
-const GameBoy = ({ showPokemon, catchPokemon }) => {
+const GameBoy = ({ showPokemon, catchPokemon, homeScreen, onScreen }) => {
   return (
     <div className="gameboy">
       <div className="body">
@@ -51,9 +51,15 @@ const GameBoy = ({ showPokemon, catchPokemon }) => {
             </div>
           </div>
 
-          <div className="ab-button a" onClick={() => catchPokemon()}>
-            <span className="button-text-height">A</span>
-          </div>
+          {
+            onScreen.home === false ? 
+              <div className="ab-button a" onClick={() => catchPokemon()}>
+                <span className="button-text-height">A</span>
+              </div>
+            : <div className="ab-button a" onClick={() => homeScreen()}>
+                <span className="button-text-height">A</span>
+              </div>
+          }
 
           <div className="ab-button b" onClick={() => showPokemon()}>
             <span className="button-text-height">B</span>
@@ -63,9 +69,15 @@ const GameBoy = ({ showPokemon, catchPokemon }) => {
           <div className="pill-button button-select"  onClick={() => showPokemon()}>
             <label className="select">SELECT</label>
           </div>
-          <div className="pill-button button-start"  onClick={() => showPokemon()}>
-            <label className="start">START</label>
-          </div>
+          {
+            onScreen.home === false ?
+              <div className="pill-button button-start"  onClick={() => homeScreen()}>
+                <label className="start">START</label>
+              </div>
+            : <div className="pill-button button-start"  onClick={() => showPokemon()}>
+                <label className="start">START</label>
+              </div>
+          }
           <div className="speaker">
             <div className="row1">
               <div className="dot-hole" />
