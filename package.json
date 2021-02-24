@@ -1,5 +1,5 @@
 {
-  "name": "pokedux-tuto-base",
+  "name": "pokedux",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -28,5 +28,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "http://remiperrinelle.com/portfolio/project-react_redux-pokedex"
 }
