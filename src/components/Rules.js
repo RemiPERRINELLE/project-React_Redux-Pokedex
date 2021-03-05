@@ -7,9 +7,10 @@ const Rules = () => {
       <img alt="Logo Pokemon" src={require('../imgs/pokemon_logo.png')} />
       <div className="commandes">
         <h3>Commandes : </h3>
-        <p>Bouton Start : Lancer le jeu ou revenir à l'écran d'accueil</p> 
-        <p>Boutons B et Select : Sélectionner un Pokémon au hasard</p>
-        <p>Bouton A : Tenter de capturer le Pokémon</p>
+        <p><span className="bold">Bouton Start : </span>Lancer le jeu ou revenir à l'écran d'accueil</p> 
+        <p><span className="bold">Boutons B et Select : </span>Sélectionner un Pokémon au hasard</p>
+        <p><span className="bold">Liste : </span>Sélectionner directement un Pokémon</p>
+        <p><span className="bold">Bouton A : </span>Tenter de capturer le Pokémon</p>
       </div>
     </div>
   )

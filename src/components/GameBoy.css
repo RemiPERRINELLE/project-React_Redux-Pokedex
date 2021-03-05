@@ -508,3 +508,148 @@
   position: absolute;
   z-index: 1;
 }
+
+
+
+/* ==============================     MEDIA QUERIES     ============================== */
+
+@media screen and (max-width: 520px) {
+  .body {
+    height: 509px;
+    width: 292px;
+  }
+
+  .power-box {
+    top: 70px;
+    left: 8px;
+    height: 20px;
+  }
+
+  .power-light {
+    height: 9px;
+    width: 9px;
+  }
+
+  .screen-box {
+    height: 234px;
+    width: 265px;
+    top: 16px;
+  }
+  
+  .screen-display {
+    height: 149px;
+    width: 162px;
+    top: 22px;
+  }
+  
+  .screen-display img {
+    width: 86px;
+  }
+  
+  .screen-logo {
+    width: 135px;
+  }
+  
+  .screen-logo-shadow {
+    top: 20.5px;
+    width: 135px;
+  }
+  
+  .nintendo-logo-screen {
+    margin-top: 27px;
+  }
+  
+  .gameboy-color-logo {
+    bottom: -39px;
+    height: 27px;
+    transform: scaleY(1);
+  }
+  
+  .nintendo-logo-body {
+    top: 36px;
+    height: 25px;
+    width: 90px;
+  }
+  
+  .button-box {
+    height: 77px;
+    width: 256px;
+    top: 41px;
+  }
+  
+  .arrow-group {
+    height: 77px;
+    width: 77px;
+  }
+  
+  .arrow {
+    left: 4px;
+    top: 4.5px;
+  }
+  
+  .dent {
+    left: 5px;
+    top: 5px;
+    height: 16px;
+    width: 16px;
+  }
+  
+  .ab-button {
+    height: 36px;
+    width: 36px;
+  }
+  
+  .a {
+    right: 0px;
+    top: 9px;
+  }
+  
+  .b {
+    bottom: 12px;
+    right: 56px;
+  }
+  
+  .button-text-height {
+    transform: scaleY(1.7);
+    top: 10px;
+    left: 13px;
+  }
+  
+  .bottom-box {
+    height: 77px;
+    width: 256px;
+    top: 69px;
+  }
+  
+  .pill-button {
+    font-size: 9px;
+    height: 9px;
+    width: 29px;
+  }
+  
+  .button-select {
+    left: 90px;
+    top: 47px;
+  }
+  
+  .button-start {
+    right: 90px;
+    top: 47px;
+  }
+  
+  .select {
+    margin-top: 18px;
+  }
+  
+  .start {
+    margin-top: 18px;
+    left: 1px;
+  }
+
+  .speaker {
+    top: -15px;
+    right: 0px;
+    position: absolute;
+    transform: skew(0, -10deg);
+  }
+}

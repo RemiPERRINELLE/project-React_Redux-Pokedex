@@ -1,5 +1,5 @@
 export default {
-  click: 0,
+  tries: 0,
   pokemons: [],
   pending: false,
   onScreen: {

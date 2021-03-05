@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./styles.css";
 import { connect } from 'react-redux';
 
-import { showPokemon, catchPokemon, homeScreen } from './store/action';
+import { showPokemon, catchPokemon, homeScreen, showSelectedPokemon } from './store/action';
 import fetchPokemons from './store/fetchPokemons'
 
 import GameBoy from "./components/GameBoy";
@@ -10,7 +10,7 @@ import PokeList from "./components/PokeList";
 import Loader from './components/Loader';
 import Rules from './components/Rules';
 
-const App = ({ fetchPokemons, pending, showPokemon, pokemons, catchPokemon, homeScreen, onScreen }) => {
+const App = ({ fetchPokemons, pending, showPokemon, pokemons, catchPokemon, homeScreen, onScreen, showSelectedPokemon }) => {
   useEffect(() => {
     fetchPokemons();
   },
@@ -29,7 +29,8 @@ const App = ({ fetchPokemons, pending, showPokemon, pokemons, catchPokemon, home
         catchPokemon={catchPokemon}
         homeScreen={homeScreen}
         onScreen={onScreen} />
-      <PokeList />
+      <PokeList 
+      showSelectedPokemon={showSelectedPokemon} />
       </div>
     </div>
   );
@@ -48,7 +49,8 @@ const mapDispatchToProps = dispatch => {
     fetchPokemons: () => dispatch(fetchPokemons()),
     showPokemon: pokemons => dispatch(showPokemon(pokemons)),
     catchPokemon: () => dispatch(catchPokemon()),
-    homeScreen: () => dispatch(homeScreen())
+    homeScreen: () => dispatch(homeScreen()),
+    showSelectedPokemon: (event, pokemon) => dispatch(showSelectedPokemon(event, pokemon))
   };
 };
 
